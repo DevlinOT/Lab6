@@ -7,10 +7,10 @@ const Read = () => {
     useEffect(
         () => {
             //do some http client work
-            axios.get('https://data-rep-mern-application.github.io/dataserver/movies.json')
+            axios.get('http://localhost:4000/api/movies')
                 .then((response) => {
-                    console.log(response.data.myArray);
-                    setMovie(response.data.myArray);
+                    console.log(response.data.movies);
+                    setMovie(response.data.movies);
                 })
                 .catch((error) => { console.log(error) });
         }, []
